@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كارسلّو — Carcello Fried Chicken</title>
+<meta name="description" content="كارسلّو — القرمشة اللي بتحبها. Crispy fried chicken, fried fresh daily in Qalqilya.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@500;700;800&family=Lalezar&family=Lilita+One&family=Montserrat:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=71">
+</head>
+<body class="is-loading">
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" role="status" aria-label="Loading">
+  <div class="loader__inner">
+    <div class="loader__spot"></div>
+    <span class="loader__shadow" aria-hidden="true"></span>
+    <div class="loader__bar" aria-hidden="true"><i></i></div>
+  </div>
+</div>
+<img class="loader-logo" src="assets/logo.png" alt="" aria-hidden="true">
+<noscript><style>.loader,.loader-logo{display:none}</style></noscript>
+
+<!-- ============ HEADER ============ -->
+<header class="nav" id="top">
+  <a href="#top" class="nav__logo" aria-label="Carcello home">
+    <!-- hand-painted brush swipes behind the logo: back-and-forth strokes,
+         slightly uneven, rotated up ~9°, with bristle streaks + ragged edges -->
+    <svg class="nav__brush" viewBox="0 0 300 220" aria-hidden="true">
+      <defs>
+        <filter id="bristle" x="-15%" y="-30%" width="130%" height="160%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.45" numOctaves="2" seed="4" result="streak"/>
+          <feColorMatrix in="streak" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3.6 0 0 0 -0.5" result="streakA"/>
+          <feComposite in="SourceGraphic" in2="streakA" operator="in" result="tex"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.03 0.09" numOctaves="2" seed="9" result="edge"/>
+          <feDisplacementMap in="tex" in2="edge" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+      <!-- stacked back-and-forth passes covering the logo top to bottom -->
+      <g filter="url(#bristle)" transform="rotate(-9 150 110)" fill="none" stroke-linecap="butt">
+        <path stroke="#FF8A1F" stroke-width="22" opacity=".85" d="M80 40C140 36 200 34 246 37"/>      <!-- top flick -->
+        <path stroke="#F06A16" stroke-width="32" opacity=".92" d="M34 68C104 63 190 58 270 55"/>     <!-- pass 1: left → right -->
+        <path stroke="#E8560F" stroke-width="34" opacity=".9"  d="M284 92C200 95 112 100 30 106"/>    <!-- pass 2: right → left -->
+        <path stroke="#F47A1F" stroke-width="32" opacity=".9"  d="M40 134C120 130 206 126 280 121"/>  <!-- pass 3: left → right -->
+        <path stroke="#EE5E14" stroke-width="30" opacity=".9"  d="M270 152C196 156 118 160 50 166"/>  <!-- pass 4: right → left -->
+        <path stroke="#E04E0C" stroke-width="18" opacity=".8"  d="M78 188C140 186 196 183 240 179"/>  <!-- bottom flick -->
+      </g>
+    </svg>
+    <img src="assets/logo.png" alt="كارسلّو">
+  </a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="menu.html">MENU <span class="ar">القائمة</span></a>
+    <a href="#signatures">SIGNATURES</a>
+    <a href="#place">THE PLACE</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="visit.html">VISIT</a>
+  </nav>
+  <a class="btn btn--dark nav__cta" href="https://wa.me/972569917030?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%83%D8%A7%D8%B1%D8%B3%D9%84%D9%91%D9%88" target="_blank" rel="noopener"><i class="dot"></i>ORDER NOW</a>
+  <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__chips">
+    <span class="chip chip--light ar">قلقيلية — صوفين — شارع 22</span>
+    <span class="chip chip--dark">EST · QLQ</span>
+  </div>
+  <div class="hero__badge">CRUNCH <i>✦</i> CRISPY <i>✦</i> FRESH <i>✦</i> FRIED DAILY</div>
+
+  <div class="hero__card hero__card--bg">
+    <!-- Hero picture (no text in it). Swap the file to change the photo. -->
+    <img class="hero__bg" src="assets/hero-bg.webp" alt="كارسلّو crispy tenders bursting out of the bucket">
+    <div class="hero__stripe" aria-hidden="true"></div>
+    <img class="hero__sticker" src="assets/logo.png" alt="Carcello bucket logo">
+
+    <h1 class="hero__title ar" dir="rtl">
+      <span class="line l1">جعـان؟</span>
+      <span class="line l2"><span class="tag">خلّينا</span></span>
+      <span class="line l3">نقرمشها</span>
+    </h1>
+
+    <div class="hero__steam" aria-hidden="true"><i></i><i></i><i></i></div>
+  </div>
+
+  <div class="hero__under">
+    <div class="hero__actions">
+      <a class="btn btn--dark" href="menu.html"><span class="ar">القائمة</span> · MENU <b>→</b></a>
+      <a class="btn btn--ghost" href="tel:+972569917030"><i class="dot"></i>+972 56 991 7030</a>
+    </div>
+    <p class="hero__tagline"><span class="ar">القرمشة اللي بتحبها</span> <em>— The Crunch You'll Love</em></p>
+  </div>
+</section>
+
+<!-- ============ RIBBONS ============ -->
+<section class="ribbons" aria-hidden="true">
+  <div class="ribbon ribbon--orange"><div class="ribbon__track" data-dir="-1"></div></div>
+  <div class="ribbon ribbon--dark"><div class="ribbon__track" data-dir="1"></div></div>
+</section>
+
+<!-- ============ SIGNATURES ============ -->
+<section class="section signatures" id="signatures">
+  <div class="wrap">
+    <p class="eyebrow reveal">SIGNATURES</p>
+    <div class="section__head">
+      <div>
+        <h2 class="h-ar reveal" dir="rtl">أشهر أطباقنا</h2>
+        <h2 class="h-en reveal">Our Greatest Hits.</h2>
+      </div>
+      <p class="section__lead reveal">Six dishes worth starting with. Tap any card to see it in the full menu.</p>
+    </div>
+
+    <div class="cards" id="cards"><!-- filled by script.js from MENU data --></div>
+  </div>
+</section>
+
+<!-- ============ THE PLACE ============ -->
+<section class="section place" id="place">
+  <div class="wrap place__grid">
+    <div class="place__copy">
+      <p class="eyebrow reveal">THE PLACE</p>
+      <h2 class="h-ar reveal" dir="rtl">القرمشة بتبلش من أول دبوس</h2>
+      <h2 class="h-en reveal">Fried Fresh. Every Single Day.</h2>
+      <p class="place__text reveal" dir="rtl">كل قطعة بتنتبّل، بتنغمّس بالخلطة، وبتنقلى طازة كل يوم — قرمشة من برا، وطراوة من جوا.</p>
+      <p class="place__text place__text--en reveal">Seasoned, breaded and fried fresh every day in Qalqilya. Crunchy outside, tender inside.</p>
+      <div class="stats">
+        <div class="stat reveal"><b data-count="14">0</b><span>crispy pieces per bucket</span></div>
+        <div class="stat reveal"><b data-count="57">0</b><span>₪ bucket deal</span></div>
+        <div class="stat reveal"><b data-count="6">0</b><span>sauces in the bucket</span></div>
+      </div>
+    </div>
+    <div class="place__visual reveal">
+      <div class="polaroid p1"><img src="assets/place-1.jpg" alt="Hand-breaded drumstick"></div>
+      <div class="polaroid p2"><img src="assets/place-2.jpg" alt="Crispy strips on the tray"></div>
+      <div class="polaroid p3"><img src="assets/place-3.jpg" alt="Broast in the Carcello box"></div>
+      <img class="place__sticker" src="assets/logo.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow reveal">ON THE FEED</p>
+    <div class="section__head">
+      <div>
+        <h2 class="h-ar reveal" dir="rtl">من مطبخنا</h2>
+        <h2 class="h-en reveal">Straight Off the Fryer.</h2>
+      </div>
+      <div class="section__btns reveal"><a class="btn btn--dark" href="gallery.html">FULL GALLERY <b>→</b></a><a class="btn btn--ghost" href="https://www.instagram.com/carcello_chicken/" target="_blank" rel="noopener">@carcello_chicken <b>↗</b></a></div>
+    </div>
+  </div>
+  <div class="gallery__rail" id="rail" tabindex="0" aria-label="Photo gallery, drag or scroll sideways"></div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="section visit" id="visit">
+  <div class="wrap">
+    <div class="visit__card reveal">
+      <div class="visit__col">
+        <p class="eyebrow eyebrow--light">VISIT</p>
+        <h2 class="h-ar h-ar--light" dir="rtl">تعال قرمش</h2>
+        <h2 class="h-en h-en--light">Come Get Crunchy.</h2>
+        <div class="section__btns"><a class="btn btn--cream" href="visit.html">MORE INFO <b>→</b></a><a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&query=Sofin+Qalqilya" target="_blank" rel="noopener">OPEN IN MAPS <b>↗</b></a></div>
+      </div>
+      <dl class="visit__info">
+        <div><dt>WHERE · <span class="ar">العنوان</span></dt><dd class="ar" dir="rtl">قلقيلية — صوفين — شارع 22</dd></div>
+        <div><dt>CALL / WHATSAPP</dt><dd><a href="tel:+972569917030">+972 56 991 7030</a></dd></div>
+        <div><dt>ORDER</dt><dd>Dine-in · Takeaway · WhatsApp</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <!-- exact logo wordmark (assets/wordmark.svg), not a font -->
+  <div class="footer__word" role="img" aria-label="كارسلّو"></div>
+
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="Carcello" class="footer__logo">
+      <p class="footer__tag ar" dir="rtl">جعان؟ خلّينا نقرمشها — دجاج مقرمش ينقلى طازة كل يوم في قلقيلية.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/carcello_chicken/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg></a>
+        <a href="https://wa.me/972569917030?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%83%D8%A7%D8%B1%D8%B3%D9%84%D9%91%D9%88" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" class="solid"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+        <a href="tel:+972569917030" aria-label="Call">
+          <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Sofin+Qalqilya" target="_blank" rel="noopener" aria-label="Location">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Footer">
+      <h4>EXPLORE <span class="ar">· تصفّح</span></h4>
+      <a href="menu.html">Menu <span class="ar">القائمة</span></a>
+      <a href="#signatures">Signatures <span class="ar">أشهر أطباقنا</span></a>
+      <a href="#place">The Place <span class="ar">المكان</span></a>
+      <a href="gallery.html">Gallery <span class="ar">من مطبخنا</span></a>
+      <a href="visit.html">Visit <span class="ar">زورونا</span></a>
+    </nav>
+
+    <div class="footer__col">
+      <h4>VISIT <span class="ar">· زورونا</span></h4>
+      <p class="ar" dir="rtl">قلقيلية — صوفين — شارع 22</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sofin+Qalqilya" target="_blank" rel="noopener">Get directions ↗</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>ORDER <span class="ar">· اطلب</span></h4>
+      <a href="https://wa.me/972569917030?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%83%D8%A7%D8%B1%D8%B3%D9%84%D9%91%D9%88" target="_blank" rel="noopener">WhatsApp order ↗</a>
+      <a href="tel:+972569917030">+972 56 991 7030</a>
+      <p>Dine-in · Takeaway</p>
+    </div>
+  </div>
+
+  <p class="footer__slogan">Crunchy. Fresh. Fried daily.</p>
+  <div class="wrap footer__row">
+    <p><span class="ar">كارسلّو</span> — Fried Fresh Daily.</p>
+    <a href="#top" class="footer__top">BACK TO TOP ↑</a>
+  </div>
+  <div class="wrap footer__credit">
+    <a class="credit" href="https://obzervo.github.io/" target="_blank" rel="noopener">
+      <span>Designed &amp; built by</span>
+      <svg class="credit__mark" viewBox="676 525 580 526" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="177" stroke-linecap="round"><path d="M873.5 613.5H1059.5"/><path d="M764 801L858 963"/><path d="M1168 801L1074 963"/></g></svg>
+      <b>Obzervo</b>
+    </a>
+    <p class="credit__legal">Carcello · Palestine · All rights reserved <span id="yr"></span> ©</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/972569917030?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%83%D8%A7%D8%B1%D8%B3%D9%84%D9%91%D9%88" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><i class="dot"></i>ORDER</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js?v=71"></script>
+</body>
+</html>
